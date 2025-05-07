@@ -1,13 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
+$host = 'localhost';
+$user = 'myuser';
+$pass = 'mypassword';
+$db   = 'mydb';
 
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
-    echo "error occured : ".$conn->connect_error;
-//   die("Connection failed: " . $conn->connect_error);
+    die("❌ Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
-?> 
+echo "✅ Connected successfully!";
+?>
